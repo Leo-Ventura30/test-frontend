@@ -6,5 +6,5 @@ const routes = express.Router();
 const PageController = require("./controllers/PageController");
 
 //route for page render
-routes.get("/home", PageController.index);
+routes.get("/", PageController.index);
 module.exports = routes;
