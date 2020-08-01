@@ -48,7 +48,7 @@ var dropdown = document.querySelectorAll(".dropdown-content a");
 var quantity = document.querySelector(".txt-quantity");
 
 function mntLink(e) {
-  if (e.value == "") {
+  if (e.value == "" || e.value < 1) {
     quantity.style.background = "rgb(243, 61, 61)";
     for (var n = 0; n < dropdown.length; n++) {
       dropdown[n].classList.add("isDisabled");

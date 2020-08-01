@@ -1,4 +1,3 @@
-<%- include('../templates/head') -%>
 <section class="content-section">
   <div class="content">
     <ul>
@@ -40,9 +39,10 @@
     btnprev.href = url2 + actualPageNumber;
   }
   
-  if(quantityOfItems<=1){
+  if(quantityOfItems<1){
     document.querySelector(".next").remove()
     document.querySelector(".previous").remove()
+    document.querySelector(".page").remove();
   }else{
     document.querySelector(".next").append()
     document.querySelector(".previous").append()
