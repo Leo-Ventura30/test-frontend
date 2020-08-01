@@ -1,0 +1,219 @@
+* {
+  font-family: "Indie Flower", cursive;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  margin: 0px;
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+.option {
+  cursor: pointer;
+}
+.nav-left {
+  background: rgb(172, 172, 172);
+  height: 99.7%;
+  width: 25%;
+  border: 1px solid;
+  position: absolute;
+}
+.div-options {
+  margin-top: 13%;
+  background: rgb(143, 141, 141);
+  width: 99.7%;
+  height: 14%;
+  border: 1px solid black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.div-options div {
+  text-align: center;
+}
+.options:hover {
+  background-color: rgb(192, 192, 192);
+  cursor: pointer;
+}
+.options:active {
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.459);
+}
+.div-options div label {
+  font-size: 18px;
+}
+::placeholder {
+  color: rgb(0, 0, 0);
+}
+.txt-quantity {
+  width: 50%;
+  font-size: 14px;
+  background-color: rgb(163, 163, 163);
+  color: black;
+  font-weight: 700;
+  text-align: center;
+  outline: none;
+  border: 1px solid black;
+}
+.content-section {
+  border: 1px solid black;
+  background: rgb(209, 209, 209);
+  margin-left: 25%;
+  height: 99.7%;
+  width: 74.8%;
+  position: absolute;
+}
+.content ul {
+  padding: 0;
+  margin: 0;
+}
+.content-section .div-section {
+  border-radius: 10px;
+  margin: 4.9%;
+  background-color: rgb(143, 141, 141);
+  width: 89.9%;
+  height: 20%;
+  display: flex;
+  border: 1px solid black;
+  align-items: center;
+}
+.num-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(209, 209, 209);
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  width: 15%;
+  height: 75%;
+  border-radius: 50%;
+  margin: 2.5%;
+  border: 1px solid black;
+}
+.div-section label {
+  text-align: center;
+  margin-left: 23.5%;
+  font-size: 24px;
+  font-weight: 500;
+}
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.next,
+.previous {
+  text-align: center;
+  position: absolute;
+  font-size: 148%;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 5px 0px 5px 0px;
+  background: rgb(190, 190, 190);
+}
+.next {
+  padding-left: 6%;
+  padding-right: 5%;
+  margin-left: 68%;
+}
+.previous {
+  padding-left: 5%;
+  padding-right: 6%;
+  margin-right: 68%;
+}
+.previous:hover,
+.next:hover {
+  cursor: pointer;
+  background: rgb(143, 141, 141);
+  scale: (1.2);
+  transform: translateY(-2px);
+}
+.previous:active,
+.next:active {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  scale: (1.6);
+  color: rgb(209, 208, 208);
+  transform: translateY(-4px);
+}
+.nav-slide {
+  position: absolute;
+  border: 1px solid black;
+  margin: 0;
+  padding: 0;
+  height: 99.8%;
+  width: 20%;
+  margin-left: 25%;
+  background-color: rgb(143, 141, 141);
+  animation-name: moveInLeft;
+  animation-duration: 1s;
+}
+@keyframes moveInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  80% {
+    opacity: 0.7;
+    transform: translate(0px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+.dropbtn {
+  background-color: #cecece;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  margin: 20% 0% 0% 26%;
+}
+.page {
+  font-size: 18px;
+  font-weight: 500;
+}
+.dropdown-content {
+  text-align: center;
+  display: none;
+  position: absolute;
+  background-color: rgb(209, 208, 208);
+  min-width: 50%;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  margin: 0% 0% 0% 26%;
+}
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown:hover .dropbtn {
+  background-color: #777777;
+}
+.isDisabled {
+  pointer-events: none;
+}
+.isDisabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.isDisabled > a {
+  color: currentColor;
+  display: inline-block;
+  pointer-events: none;
+  text-decoration: none;
+}

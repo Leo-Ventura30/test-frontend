@@ -1,0 +1,25 @@
+<%- include('../templates/head') -%>
+<nav class="nav-left">
+  <div class="div-options options" id="option">
+    <div>
+      <label class="option">Option</label>
+    </div>
+  </div>
+  <div class="div-options quantity" id="quantity">
+    <div>
+      <label>Quantity</label>
+      <br />
+      <input
+        type="text"
+        name="quantity"
+        class="txt-quantity"
+        placeholder="Type
+      here"
+        value="<%= quantityOfItems%>"
+        max="250"
+        min="1"
+        onkeypress="return event.charCode >= 48 && event.charCode <= 57"
+      />
+    </div>
+  </div>
+</nav>

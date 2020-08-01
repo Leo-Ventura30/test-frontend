@@ -1,0 +1,50 @@
+<%- include('../templates/head') -%>
+<section class="content-section">
+  <div class="content">
+    <ul>
+      <% for(var item = 1 + ((actualPageNumber -1 )* limitOfItems);item <=  (actualPageNumber * limitOfItems) && item <= quantityOfItems;item++){%>
+      <li>
+        <div class="div-section">
+          <div class="num-item"><%= item%></div>
+          <label class="item">Item <%= optionsOfItems%><%= item%> </label>
+        </div>
+      </li>
+      <%}%>
+    </ul>
+    <div class="buttons" id="btn">
+      <div class="previous" onclick="prev()"><a id="prev"><< Prev</a></div>
+      <div class="page"><%= actualPageNumber%> / <%= totalPages%></div>
+      <div class="next" onclick="next()"><a id="next">Next >></a></div>
+    </div>
+  </div>
+</section>
+<script>
+  let btnnext = document.querySelector("#next");
+  let btnprev = document.querySelector("#prev");
+
+  var optionsOfItems = "<%= optionsOfItems%>";
+  var actualPageNumber = parseInt("<%= actualPageNumber %>");
+  var totalPages = parseInt("<%= totalPages%>");
+  var quantityOfItems = parseInt("<%= quantityOfItems%>");
+
+  var url = window.location.pathname;
+  var url2 = url + "?option="+ optionsOfItems + "&&quantity=" + quantityOfItems + "&&page=";
+
+  function next() {
+    actualPageNumber =
+      actualPageNumber >= totalPages ? (actualPageNumber = totalPages) : (actualPageNumber = actualPageNumber + 1);
+    btnnext.href = url2 + actualPageNumber;
+  }
+  function prev() {
+    actualPageNumber = actualPageNumber < 2 ? (actualPageNumber = 1) : (actualPageNumber = actualPageNumber - 1);
+    btnprev.href = url2 + actualPageNumber;
+  }
+  
+  if(quantityOfItems<=1){
+    document.querySelector(".next").remove()
+    document.querySelector(".previous").remove()
+  }else{
+    document.querySelector(".next").append()
+    document.querySelector(".previous").append()
+  }
+</script>
