@@ -38,13 +38,17 @@
     actualPageNumber = actualPageNumber < 2 ? (actualPageNumber = 1) : (actualPageNumber = actualPageNumber - 1);
     btnprev.href = url2 + actualPageNumber;
   }
-  
-  if(quantityOfItems<1){
+  if(totalPages<=1){
     document.querySelector(".next").remove()
     document.querySelector(".previous").remove()
-    document.querySelector(".page").remove();
   }else{
     document.querySelector(".next").append()
-    document.querySelector(".previous").append()
+    document.querySelector(".previous").append()  
+  }
+  if(quantityOfItems<1){
+    
+    document.querySelector(".page").remove();
+  }else{
+    document.querySelector(".page").append();
   }
 </script>
