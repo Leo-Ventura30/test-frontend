@@ -166,6 +166,10 @@ a {
     transform: translate(0);
   }
 }
+.page {
+  font-size: 18px;
+  font-weight: 500;
+}
 .dropbtn {
   background-color: #cecece;
   color: white;
@@ -174,10 +178,6 @@ a {
   border: none;
   cursor: pointer;
   margin: 20% 0% 0% 26%;
-}
-.page {
-  font-size: 18px;
-  font-weight: 500;
 }
 .dropdown-content {
   text-align: center;
