@@ -39,7 +39,7 @@ function removeClass() {
   return navSlide.classList.remove("nav-slide");
 }
 
-const base = "home?option=";
+const base = "?option=";
 const quantityBase = "&&quantity=";
 
 const pagebase = "&&page=1";
